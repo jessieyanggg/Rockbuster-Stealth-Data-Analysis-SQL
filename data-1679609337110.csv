@@ -1,0 +1,91 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","Rockbuster","public","actor","actor_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","address_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","category","category_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","city","city_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","country","country_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","customer_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_actor","actor_id",1,"smallint",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_actor","film_id",2,"smallint",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_category","film_id",1,"smallint",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_category","category_id",2,"smallint",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","film_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","inventory","inventory_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","language","language_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","payment","payment_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","rental","rental_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","staff_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","store","store_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","address_id",6,"smallint",NULL,"FOREIGN KEY","public","address","address_id"
+"postgresql","Rockbuster","public","film_actor","actor_id",1,"smallint",NULL,"FOREIGN KEY","public","actor","actor_id"
+"postgresql","Rockbuster","public","film_actor","film_id",2,"smallint",NULL,"FOREIGN KEY","public","film","film_id"
+"postgresql","Rockbuster","public","film_category","category_id",2,"smallint",NULL,"FOREIGN KEY","public","category","category_id"
+"postgresql","Rockbuster","public","film_category","film_id",1,"smallint",NULL,"FOREIGN KEY","public","film","film_id"
+"postgresql","Rockbuster","public","film","language_id",5,"smallint",NULL,"FOREIGN KEY","public","language","language_id"
+"postgresql","Rockbuster","public","address","city_id",5,"smallint",NULL,"FOREIGN KEY","public","city","city_id"
+"postgresql","Rockbuster","public","city","country_id",3,"smallint",NULL,"FOREIGN KEY","public","country","country_id"
+"postgresql","Rockbuster","public","inventory","film_id",2,"smallint",NULL,"FOREIGN KEY","public","film","film_id"
+"postgresql","Rockbuster","public","payment","customer_id",2,"smallint",NULL,"FOREIGN KEY","public","customer","customer_id"
+"postgresql","Rockbuster","public","payment","rental_id",4,"integer",NULL,"FOREIGN KEY","public","rental","rental_id"
+"postgresql","Rockbuster","public","payment","staff_id",3,"smallint",NULL,"FOREIGN KEY","public","staff","staff_id"
+"postgresql","Rockbuster","public","rental","customer_id",4,"smallint",NULL,"FOREIGN KEY","public","customer","customer_id"
+"postgresql","Rockbuster","public","rental","inventory_id",3,"integer",NULL,"FOREIGN KEY","public","inventory","inventory_id"
+"postgresql","Rockbuster","public","rental","staff_id",6,"smallint",NULL,"FOREIGN KEY","public","staff","staff_id"
+"postgresql","Rockbuster","public","staff","address_id",4,"smallint",NULL,"FOREIGN KEY","public","address","address_id"
+"postgresql","Rockbuster","public","store","address_id",3,"smallint",NULL,"FOREIGN KEY","public","address","address_id"
+"postgresql","Rockbuster","public","store","manager_staff_id",2,"smallint",NULL,"FOREIGN KEY","public","staff","staff_id"
+"postgresql","Rockbuster","public","address","district",4,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","store_id",2,"smallint",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","store","last_update",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","postal_code",6,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","country","last_update",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","rental","return_date",5,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","inventory","store_id",3,"smallint",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","email",5,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","actor","last_update",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","city","last_update",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","category","name",2,"character varying",25,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","inventory","last_update",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","replacement_cost",9,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","last_update",9,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","language","name",2,"character",20,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","category","last_update",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","rental_duration",6,"smallint",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","address2",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","city","city",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","payment","payment_date",6,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","active",7,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","picture",11,"bytea",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","last_update",8,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","language","last_update",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","phone",7,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","actor","first_name",2,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","title",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","country","country",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","last_name",3,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","first_name",3,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","actor","last_name",3,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","activebool",7,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","active",10,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","address","address",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","rental_rate",7,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","first_name",2,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","last_name",4,"character varying",45,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","length",8,"smallint",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","fulltext",13,"tsvector",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","release_year",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","customer","create_date",8,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","username",8,"character varying",16,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_category","last_update",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","password",9,"character varying",40,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","last_update",11,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","email",5,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","store_id",6,"smallint",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","rating",10,"USER-DEFINED",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","staff","last_update",10,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","rental","last_update",7,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","description",3,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","rental","rental_date",2,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","payment","amount",5,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film_actor","last_update",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","Rockbuster","public","film","special_features",12,"ARRAY",NULL,NULL,NULL,NULL,NULL
