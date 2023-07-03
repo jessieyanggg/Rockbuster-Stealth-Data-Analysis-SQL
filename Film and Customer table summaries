@@ -1,1 +1,44 @@
+SELECT
 
+MIN(rental_rate) AS min_rentr,
+MAX(rental_rate) AS max_rentr,
+AVG(rental_rate) AS avg_rentr,
+COUNT(rental_rate) AS count_rentr_values, 
+COUNT(*) AS count_rows,
+
+MIN(rental_duration) AS min_rentd, 
+MAX(rental_duration) AS max_rentd,
+AVG(rental_duration) AS avg_rentd,
+COUNT(rental_duration) AS count_rentd_values,
+COUNT(*) AS count_rows,
+
+MIN(length) AS min_length,
+MAX(length) AS max_length,
+AVG(length) AS avg_length,
+COUNT(length) AS count_length_values,
+COUNT(*) AS count_rows,
+
+MIN(replacement_cost) AS min_repl,
+MAX(replacement_cost) AS max_repl,
+AVG(replacement_cost) AS avg_repl,
+COUNT(replacement_cost) AS count_repl_values,
+COUNT(*) AS count_rows, 
+
+MODE() WITHIN GROUP (ORDER BY title)
+ AS mode_title,
+MODE() WITHIN GROUP (ORDER BY description)
+ AS mode_description,
+MODE() WITHIN GROUP (ORDER BY release_year)
+ AS mode_release_year,
+MODE() WITHIN GROUP (ORDER BY language_id)
+ AS mode_langid,
+MODE() WITHIN GROUP (ORDER BY rating)
+ AS mode_rating,
+MODE() WITHIN GROUP (ORDER BY last_update)
+  AS mode_last_update, 
+MODE() WITHIN GROUP (ORDER BY special_features)
+  AS mode_special_features, 
+MODE() WITHIN GROUP (ORDER BY fulltext)
+  AS mode_fulltext 
+
+FROM film;
