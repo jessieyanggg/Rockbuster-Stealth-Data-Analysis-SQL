@@ -1,0 +1,20 @@
+SELECT
+
+MODE() WITHIN GROUP (ORDER BY customer_id)
+ AS mode_customerid,
+MODE() WITHIN GROUP (ORDER BY store_id)
+ AS mode_storeid,
+MODE() WITHIN GROUP (ORDER BY first_name)
+ AS mode_firstname,
+MODE() WITHIN GROUP (ORDER BY last_name)
+ AS mode_lastname,
+MODE() WITHIN GROUP (ORDER BY email)
+ AS mode_email,
+MODE() WITHIN GROUP (ORDER BY address_id)
+  AS mode_addressid, 
+MODE() WITHIN GROUP (ORDER BY create_date)
+  AS mode_createdate, 
+MODE() WITHIN GROUP (ORDER BY last_update)
+  AS mode_last_update
+
+FROM customer;
