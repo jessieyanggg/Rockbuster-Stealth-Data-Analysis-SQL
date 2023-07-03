@@ -1,0 +1,80 @@
+#check for and clean dirty data
+
+#find duplicates in film table 
+
+SELECT film_id, title, 
+        description, release_year, 
+        language_id, rental duration, 
+
+        COUNT(*) 
+
+FROM film 
+
+GROUP BY
+film_id, title, description, release_year, language_id, rental_duration
+
+HAVING COUNT(*) >1; 
+
+#find duplicates in customer table 
+
+SELECT customer_id, store_id, first_name, last_name, email,
+
+        COUNT(*)
+
+FROM customer 
+
+GROUP BY 
+customer_id, store_id, first_name, last_name, 
+email 
+
+HAVING COUNT(*) >1; 
+
+#check for non-uniform values 
+
+#film table 
+
+SELECT distinct 
+    rating 
+FROM film 
+
+SELECT DISTINCT 
+  release_year 
+FROM film 
+
+#customer table 
+
+SELECT DISTINCT
+    activebool 
+FROM customer 
+
+SELECT DISTINCT 
+      create_date
+FROM customer 
+
+SELECT DISTINCT 
+      active 
+FROM customer 
+
+#Find missing values from film table 
+
+SELECT * 
+        from film 
+where title 
+is NULL 
+
+SELECT * 
+      from film 
+where description 
+is NULL 
+
+#Find missing values from customer table 
+
+SELECT * 
+      from customer 
+where email 
+is NULL 
+
+SELECT * 
+      from customer 
+where create_date 
+is NULL 
