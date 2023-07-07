@@ -11,3 +11,6 @@ Key Questions and Objectives:
 -Which countries are Rockbuster customers based in?
 -Where are customers with a high lifetime value based?
 -Do sales figures vary between geographic regions?
+
+How to read the data 
+What each document is 
