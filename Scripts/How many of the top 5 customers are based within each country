@@ -1,4 +1,5 @@
---Find out how many of the top 5 customers are baesd within each country
+--Find out how many of the top 5 customers are based within each country
+
 SELECT D.country, COUNT(A.customer_id) as all_customer_count, 
 COUNT(top_5_customers) as top_customer_count
 FROM customer A 
