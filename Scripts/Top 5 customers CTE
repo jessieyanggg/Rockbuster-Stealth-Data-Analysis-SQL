@@ -1,4 +1,4 @@
-//Find out how many of the top 5 customers are based within each country.
+#Find out how many of the top 5 customers are based within each country.
 
 WITH top_5_customers_cte(customer_id, first_name, last_name, country, city, total_amount_paid)
 AS
