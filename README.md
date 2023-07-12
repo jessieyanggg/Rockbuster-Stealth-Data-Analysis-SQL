@@ -3,7 +3,9 @@
 Project brief: 
 Rockbuster Stealth LLC is a movie rental company that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime, the Rockbuster Stealth management team is planning to use its existing movie licenses to launch an online video rental service in order to stay competitive. 
 
-Objective: Help Rockbuster launch a 2020 company launch strategy by answering the following key questions: 
+Objective: Help Rockbuster launch a 2020 company launch strategy by answering the following 
+
+# Key Question
 
 -Which movies contributed the most/least to revenue gain?
 -What was the average rental duration for all videos?
